@@ -1,13 +1,23 @@
 
+
+
 ##addition
-def add(num1, num2):
-    return num1+num2
+def add(*n):
+    add = 0
+    for num in n:
+        add += num
+
+    return add
 
 ##muliply
-def multiply(num1, num2):
-    return num1*num2
+def multiply(*b):
+    multiply = 1 
+    for num in b:
+        multiply *= num
 
-print("choose operations") 
+    return multiply
+
+print(" choose operations") 
 print('1. Add')
 print('2. Multiply') 
 
@@ -16,10 +26,8 @@ num1 = float(input('Enter a number: '))
 num2 = float(input('Enter another number: '))
 
 if choose == "1" :
-    print(add(num1,num2))
+    print(add(num1+num2))
 elif choose == "2" :
-    print(multiply(num1,num2))
+    print(multiply(num1*num2))
 else:
-    print("invalid value")    
-
-
+    print("invalid value")
